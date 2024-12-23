@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void printSquare(int number) {
-        System.out.println("Квадрат числа " + number + " дорівнює " + (number * number) + ".");
+        int square = number * number;
+        System.out.println("Квадрат числа " + number + " дорівнює " + square + ".");
     }
 
     public static double calculateCylinderVolume(double radius, double height) {
@@ -38,24 +39,21 @@ public class Main {
         System.out.print("Введіть ціле число: ");
         int number = scanner.nextInt();
         printSquare(number);
-
         System.out.print("Введіть радіус циліндра: ");
         double radius = scanner.nextDouble();
         System.out.print("Введіть висоту циліндра: ");
         double height = scanner.nextDouble();
         double volume = calculateCylinderVolume(radius, height);
         System.out.println("Об'єм циліндра з радіусом " + radius + " і висотою " + height + " дорівнює " + volume);
-
         int[] array = {10, 20, 30, 40, 50};
         int sum = calculateArraySum(array);
         System.out.println("Масив чисел: [10, 20, 30, 40, 50]");
         System.out.println("Сума всіх елементів масиву дорівнює " + sum);
-
         scanner.nextLine();
         System.out.print("Введіть рядок: ");
         String inputString = scanner.nextLine();
-        String reversedString = reverseString(inputString);
-        System.out.println("Рядок в зворотньому порядку: " + reversedString);
+        String reversed = reverseString(inputString);
+        System.out.println("Рядок в зворотньому порядку: " + reversed);
 
         System.out.print("Введіть a: ");
         int a = scanner.nextInt();
@@ -66,7 +64,7 @@ public class Main {
 
         System.out.print("Введіть ціле число n: ");
         int n = scanner.nextInt();
-        scanner.nextLine(); // Очистити буфер
+        scanner.nextLine();
         System.out.print("Введіть текстовий рядок: ");
         String text = scanner.nextLine();
         printTextNTimes(n, text);
